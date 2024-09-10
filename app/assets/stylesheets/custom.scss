@@ -1,4 +1,4 @@
-@import "bootstrap-sprockets";
+
 @import "bootstrap";
 
 /* mixins, variables, etc. */
@@ -49,7 +49,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color:$gray-500;
 }
 
 p {
@@ -81,11 +81,11 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+  color:$gray-500;
   a {
-    color: $gray;
+    color:$gray-500;
     &:hover {
-      color: $gray-darker;
+        color:$gray-500;
     }
   }
   small {
@@ -169,8 +169,8 @@ input, textarea, select, .uneditable-input {
 }
 
 .field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
+    @extend .is-invalid;  // Bootstrap 5に対応
+    .form-control {
+      color: $danger;  // Bootstrap 5でのエラーカラー
+    }
   }
-}
