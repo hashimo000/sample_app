@@ -3,7 +3,9 @@ source "https://rubygems.org"
 ruby "3.2.5"
 #bootstrap
 gem 'bootstrap', '~> 5.0.2'
-gem 'sassc-rails'
+gem 'jquery-rails'
+gem 'devise'
+gem "sorcery", "~> 0.16.3"
 gem 'bcrypt',         '3.1.11'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.4"
