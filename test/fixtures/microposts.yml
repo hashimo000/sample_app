@@ -1,0 +1,32 @@
+orange:
+  content: "I just ate an orange!"
+  created_at: 2024-09-17 12:00:00
+  user: michael
+
+tau_manifesto:
+  content: "Check out the @tauday site by @mhartl: http://tauday.com"
+  created_at: 2021-09-17 12:00:00
+  user: michael
+
+cat_video:
+  content: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
+  created_at: 2024-09-17 10:00:00
+  user: michael
+
+most_recent:
+  content: "Writing a short test"
+  created_at: 2024-09-17 12:54:27
+  user: michael
+
+# 30件のフィクスチャを静的に追加
+micropost_1:
+  content: "Example micropost content 1"
+  created_at: 2024-09-17 12:00:00
+  user: michael
+
+micropost_2:
+  content: "Example micropost content 2"
+  created_at: 2024-09-17 12:00:00
+  user: michael
+
+# 以下、30件分同様に書く

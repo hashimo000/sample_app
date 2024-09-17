@@ -1,12 +1,4 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+# 管理者ユーザーの作成
 User.create!(name:  "Example User",
              email: "example@railstutorial.org",
              password:              "foobar",
@@ -15,6 +7,7 @@ User.create!(name:  "Example User",
              activated: true,
              activated_at: Time.zone.now)
 
+# 一般ユーザーの作成
 99.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
@@ -24,5 +17,12 @@ User.create!(name:  "Example User",
                password:              password,
                password_confirmation: password,
                activated: true,
-              activated_at: Time.zone.now)
+               activated_at: Time.zone.now)
+end
+
+# 作成された最初の6ユーザーに対してマイクロポストを生成
+users = User.order(:created_at).take(6)
+50.times do
+  content = Faker::Lorem.sentence(word_count: rand(5..10))  # 文の長さをランダム化
+  users.each { |user| user.microposts.create!(content: content) }
 end

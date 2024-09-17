@@ -10,6 +10,8 @@ gem 'bcrypt',         '3.1.11'
 gem "faker"
 gem 'will_paginate'
 gem 'will_paginate-bootstrap-style'
+
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.4"
 
