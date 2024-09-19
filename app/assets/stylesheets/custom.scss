@@ -1,10 +1,15 @@
-@import "bootstrap-sprockets";
+
 @import "bootstrap";
 
 /* mixins, variables, etc. */
 
-$gray-medium-light: #eaeaea;
+$gray: #808080; 
 
+$gray-light: #d3d3d3; 
+$gray-lighter: #f5f5f5;
+$gray-medium-light: #eaeaea;
+$gray-darker: #333333;
+$state-danger-text: #ff0000;
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
@@ -51,7 +56,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: #d3d3d3;  
 }
 
 p {
@@ -210,7 +215,7 @@ input {
 }
 
 .field_with_errors {
-  @extend .has-error;
+  @extend .is-invalid; 
   .form-control {
     color: $state-danger-text;
   }
